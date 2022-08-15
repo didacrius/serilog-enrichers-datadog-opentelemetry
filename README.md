@@ -1,6 +1,6 @@
 # Serilog.Enrichers.Datadog.OpenTelemetry
 
-![CI](https://github.com/didacrius/serilog-enrichers-datadog-opentelemetry/workflows/CI/badge.svg)
+![CI](https://github.com/didacrius/serilog-enrichers-datadog-opentelemetry/actions/workflows/ci.yml/badge.svg)
 [![NuGet](https://img.shields.io/nuget/vpre/Serilog.Enrichers.Datadog.OpenTelemetry.svg)](https://www.nuget.org/packages/Serilog.Enrichers.Datadog.OpenTelemetry)
 
 Enriches Serilog events with Datadog trace and span ids by taken the value of them from System.Diagnostics.Activity trace and span ids for Datadog traces correlation generated from OpenTelemetry.
@@ -30,7 +30,7 @@ The `WithDatadogSpanId()` enricher will add a `dd.span_id` property with the cur
 The package includes:
 
  * `WithDatadogTraceId()` - adds a Datadog trace id to correlate logs with OpenTelemetry Datadog traces.
- * `WithDatadogSpanId(headerKey)` - adds a Datadog span id to correlate logs with OpenTelemetry Datadog spans traces.
+ * `WithDatadogSpanId()` - adds a Datadog span id to correlate logs with OpenTelemetry Datadog spans traces.
 
 ## Using it into an ASP.NET Core Web Application
 
@@ -47,11 +47,7 @@ builder.Logging.ClearProviders()
         .WriteTo.DatadogLogs(builder.Configuration.GetValue<string>("Datadog:ApiKey"),
             service: assemblyName.Name,
             configuration: datadogConf)
-        .CreateLogger())
-    .AddOpenTelemetry(options =>
-    {
-        options.AddOtlpExporter();
-    });
+        .CreateLogger());
 
 builder.Services
     .AddOpenTelemetryTracing(options =>
