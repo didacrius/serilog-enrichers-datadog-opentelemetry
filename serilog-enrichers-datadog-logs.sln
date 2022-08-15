@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{ED5A5BF0-5A7A-4F1D-A9E2-547E23A1DFC2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Serilog.Enrichers.Datadog.OpenTelemetry", "src\Serilog.Enrichers.Datadog.OpenTelemetry\Serilog.Enrichers.Datadog.OpenTelemetry.csproj", "{FB9B5673-40A0-48C7-907A-423B813595EA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{A3DFFA40-F596-4F7E-9107-72F51FA5584F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Serilog.Enrichers.Datadog.OpenTelemetry.Tests", "tests\Serilog.Enrichers.Datadog.OpenTelemetry.Tests\Serilog.Enrichers.Datadog.OpenTelemetry.Tests.csproj", "{F1256D20-E524-4C1F-A481-EE243EE5F7A3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FB9B5673-40A0-48C7-907A-423B813595EA} = {ED5A5BF0-5A7A-4F1D-A9E2-547E23A1DFC2}
+		{F1256D20-E524-4C1F-A481-EE243EE5F7A3} = {A3DFFA40-F596-4F7E-9107-72F51FA5584F}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FB9B5673-40A0-48C7-907A-423B813595EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB9B5673-40A0-48C7-907A-423B813595EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB9B5673-40A0-48C7-907A-423B813595EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB9B5673-40A0-48C7-907A-423B813595EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1256D20-E524-4C1F-A481-EE243EE5F7A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1256D20-E524-4C1F-A481-EE243EE5F7A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1256D20-E524-4C1F-A481-EE243EE5F7A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1256D20-E524-4C1F-A481-EE243EE5F7A3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

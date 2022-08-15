@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <LangVersion>latest</LangVersion>
+        <Version>1.0.0</Version>
+        <Product>Serilog.Enrichers.Datadog.OpenTelemetry.Logs</Product>
+        <PackageId>Serilog.Enrichers.Datadog.OpenTelemetry</PackageId>
+        <PackageTags>serilog;enricher;datadog;activity.trace;logs</PackageTags>
+        <RepositoryType>git</RepositoryType>
+        <RepositoryUrl>https://github.com/didacrius/Serilog.Enrichers.Datadog.Logs</RepositoryUrl>
+        <IncludeSymbols>true</IncludeSymbols>
+        <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+        <EmbedUntrackedSources>true</EmbedUntrackedSources>
+        <RepositoryType>git</RepositoryType>
+        <Description>Serilog enrichers for correlating Datadog logs with traces from System.Diagnostics.Activity.</Description>
+        <Authors>Didac Rius Martin</Authors>
+        <Copyright>Didac Rius Martin</Copyright>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Serilog" Version="2.11.0" />
+        <PackageReference Include="System.Diagnostics.DiagnosticSource" Version="6.0.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <AssemblyAttribute Include="System.Runtime.CompilerServices.InternalsVisibleToAttribute">
+            <_Parameter1>$(AssemblyName).Unit.Tests</_Parameter1>
+        </AssemblyAttribute>
+        <AssemblyAttribute Include="System.Runtime.CompilerServices.InternalsVisibleToAttribute">
+            <_Parameter1>DynamicProxyGenAssembly2</_Parameter1>
+        </AssemblyAttribute>
+    </ItemGroup>
+
+</Project>
