@@ -4,13 +4,13 @@ using Serilog.Configuration;
 namespace Serilog.Enrichers.Datadog.OpenTelemetry
 {
     /// <summary>
-    /// Extends <see cref="LoggerConfiguration"/> to add enrichers for <see cref="Activity.Current"/>
+    /// Extends <see cref="LoggerConfiguration"/> to add enrichers for <see cref="System.Diagnostics.Activity.Current"/>
     /// capabilities.
     /// </summary>
     public static class ActivityContextDatadogLoggerConfigurationExtensions
     {
         /// <summary>
-        /// Enrich log events with a dd.trace_id property containing the <see cref="Activity.Current.TraceId"/>.
+        /// Enrich log events with a dd.trace_id property containing the <see cref="System.Diagnostics.Activity.Current.TraceId"/>.
         /// </summary>
         /// <param name="enrichmentConfiguration">Logger enrichment configuration.</param>
         /// <returns>Configuration object allowing method chaining.</returns>
@@ -23,7 +23,7 @@ namespace Serilog.Enrichers.Datadog.OpenTelemetry
         }
 
         /// <summary>
-        /// Enrich log events with a dd.span_id property containing the <see cref="Activity.Current.SpanId"/>.
+        /// Enrich log events with a dd.span_id property containing the <see cref="System.Diagnostics.Activity.Current.SpanId"/>.
         /// </summary>
         /// <param name="enrichmentConfiguration">Logger enrichment configuration.</param>
         /// <returns>Configuration object allowing method chaining.</returns>
